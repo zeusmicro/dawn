@@ -44,8 +44,8 @@
     max-width: calc({{ section.settings.logo_width }}px * 0.5);
   }
 
-  .section-header:not(.past-header) .header-wrapper--transparent:not(:hover) .header__icon,
-  .section-header:not(.past-header) .header-wrapper--transparent:not(:hover) .header__menu-item {
+  .section-header:not(.past-header) .header-wrapper--transparent:not(:hover):not(:focus-within) .header__icon,
+  .section-header:not(.past-header) .header-wrapper--transparent:not(:hover):not(:focus-within) .header__menu-item {
     color: {{ section.settings.transparent_text_color }};
   }
 
@@ -666,7 +666,7 @@
         observer.disconnect();
       });
 
-      observer.observe(this.header);
+      observer.observe(this);
     }
 
     onScroll() {
