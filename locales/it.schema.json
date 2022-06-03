@@ -1682,9 +1682,12 @@
             "label": "Elencato"
           },
           "options__2": {
-            "label": "Miniature"
+            "label": "2 colonne"
           },
           "options__3": {
+            "label": "Miniature"
+          },
+          "options__4": {
             "label": "Carosello miniature"
           }
         },
@@ -1708,6 +1711,9 @@
           },
           "options__2": {
             "label": "Nascondi miniature"
+          },
+          "options__3": {
+            "label": "2 colonne"
           }
         }
       }

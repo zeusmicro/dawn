@@ -1681,9 +1681,12 @@
             "label": "Üst üste"
           },
           "options__2": {
-            "label": "Küçük resimler"
+            "label": "2 sütun"
           },
           "options__3": {
+            "label": "Küçük resimler"
+          },
+          "options__4": {
             "label": "Küçük resim döngüsü"
           }
         },
@@ -1707,6 +1710,9 @@
           },
           "options__2": {
             "label": "Küçük resimleri gizle"
+          },
+          "options__3": {
+            "label": "2 sütun"
           }
         }
       },

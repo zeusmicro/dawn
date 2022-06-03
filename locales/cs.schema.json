@@ -1682,9 +1682,12 @@
             "label": "Nad sebou"
           },
           "options__2": {
-            "label": "Miniatury"
+            "label": "2 sloupce"
           },
           "options__3": {
+            "label": "Miniatury"
+          },
+          "options__4": {
             "label": "Karusel miniatur"
           }
         },
@@ -1708,6 +1711,9 @@
           },
           "options__2": {
             "label": "Skrýt miniatury"
+          },
+          "options__3": {
+            "label": "2 sloupce"
           }
         }
       }
