@@ -1,0 +1,31 @@
+
+        {% unless content_for_header contains "Shopify.preview_host" %}
+            {% assign old_content_for_layout = content_for_layout %}
+            {% unless customer %}
+                {% if  template != "customers/login" and template != "customers/reset_password" and template != "customers/register" and template != "customers/activate_account" and request.path != "/challenge" %}
+                    
+            {% assign isApplyForceLogin = true %}
+            {% capture content_for_layout %}
+                null
+                {% capture login_require_custom_style %}
+                    {% render 'login_require_custom_style' %}
+                {% endcapture %}
+                {% unless login_require_custom_style contains "Liquid error" %}
+                    {{ login_require_custom_style }}
+                {% endunless %}
+            {% endcapture %}
+        
+                {% else %}
+                    {% capture login_require_custom_style %}
+                        {% render 'login_require_custom_style' %}
+                    {% endcapture %}
+                    {% capture content_for_layout %}
+                        {% assign isApplyForceLogin = false %}
+                        {{old_content_for_layout}}
+                        {% unless login_require_custom_style contains "Liquid error" %}
+                            {{ login_require_custom_style }}
+                        {% endunless %}
+                    {% endcapture %}
+                {% endif %}
+            {% endunless %}
+        {% endunless %}
